@@ -1,3 +1,4 @@
+
 //Name: Adesh Rai
 //Course: CSC103
 //Date:  February 24, 2021
@@ -167,7 +168,7 @@ class SequenceTestJava {
             input = key.nextInt();
             isTrue = false;
          } catch (InputMismatchException e) {
-            System.out.println("Invalid entry, Enter a number: ");
+            System.out.println("Invalid entry, Please enter another number: ");
             key.next();
          } catch (Exception e) {
             System.out.println("Please enter valid number, not letter or characters.");
