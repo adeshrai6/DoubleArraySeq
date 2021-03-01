@@ -7,10 +7,11 @@
 // "Data Structures and Other Objects Using Java" by Michael Main.
 
 /******************************************************************************
- * This class is a homework assignment; A DoubleArraySeq is a collection of
- * double numbers. The sequence can have a special "current element," which is
- * specified and accessed through four methods that are not available in the bag
- * class (start, getCurrent, advance and isCurrent).
+ * @author: Michael Main This class is a homework assignment; A DoubleArraySeq
+ *          is a collection of double numbers. The sequence can have a special
+ *          "current element," which is specified and accessed through four
+ *          methods that are not available in the bag class (start, getCurrent,
+ *          advance and isCurrent).
  *
  * @note (1) The capacity of one a sequence can change after it's created, but
  *       the maximum capacity is limited by the amount of free memory on the
@@ -195,7 +196,7 @@ public class DoubleArraySeq implements Cloneable {
     **/
 
    @Override
-   public DoubleArraySeq clone() {
+   public DoubleArraySeq clone() { // This is written by book author Michael Main
       DoubleArraySeq answer;
 
       try {
@@ -357,7 +358,7 @@ public class DoubleArraySeq implements Cloneable {
     * @exception OutOfMemoryError Indicates insufficient memory for altering the
     *                             capacity.
     **/
-   public void trimToSize() {
+   public void trimToSize() { // This is written by book author Michael Mian
       double[] trimmedArray;
 
       if (data.length == manyItems) {
@@ -497,6 +498,7 @@ public class DoubleArraySeq implements Cloneable {
     * 
     * @param - obj is a general object
     * @poscondition If both object are equal it will return true
+    * @return - true if equal or false if not equal
     */
    public boolean equals(Object obj) {
       boolean areEqual = true;
@@ -523,7 +525,7 @@ public class DoubleArraySeq implements Cloneable {
     */
    public String toString() {
       String message = " "; // create a new string that will be our message
-      if (size() == 0)
+      if (size() <= 0)
          message += "Sorry, your sequence is empty!";
       else {
          for (int i = 0; i < manyItems; i++) { // for each of the elements in the sequence
