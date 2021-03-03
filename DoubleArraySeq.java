@@ -486,7 +486,6 @@ public class DoubleArraySeq implements Cloneable {
    public void setCurrent(int location) {
 
       if (location > manyItems || location < 0) {
-         ;
          throw new IllegalStateException("setCurrent could not complete because " + ""
                + "the sequence is empty or the index specified is smaller/larger than the sequence length.");
       }
